@@ -1,0 +1,73 @@
+.root {
+    -fx-background-image: url("../images/frog.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+.card {
+    -fx-background-color: white;
+    -fx-border-color: gray;
+    -fx-border-width: 2;
+    -fx-background-radius: 20; /* Закругление углов */
+    -fx-border-radius: 20; /* Закругление углов рамки */
+    -fx-padding: 20;
+}
+
+.custom-button {
+    -fx-background-color: #9b59b6;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-pref-width: 300px;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 25; /* Закругленные углы */
+    -fx-border-radius: 25; /* Закругленные углы у рамки */
+    -fx-border-color: #9b59b6;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 8, 0, 2, 2);
+    -fx-cursor: hand; /* Курсор при наведении */
+    -fx-transition: all 0.3s ease; /* Плавные переходы */
+}
+
+.custom-button:hover {
+    -fx-background-color: #8e44ad; /* Цвет кнопки при наведении */
+    -fx-border-color: #8e44ad; /* Изменение цвета рамки при наведении */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 2, 2); /* Тень при наведении */
+}
+.account-title {
+    -fx-font-size: 50px; /* Сделаем слово "Аккаунт" еще больше */
+    -fx-font-weight: bold;
+    -fx-text-fill: #9B59B6; /* Сиреневый цвет */
+}
+.custom-button:pressed {
+    -fx-background-color: #6c3483; /* Цвет кнопки при нажатии */
+    -fx-border-color: #6c3483;
+}
+
+.title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4a148c;
+}
+
+.subtitle {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.bestschool-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black; /* Цвет текста на черный */
+}
+
+AnchorPane, VBox, HBox {
+    -fx-background-radius: 20; /* Закругление углов контейнеров */
+}
+
+.back-text-style {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-fill: #9B59B6;            /* Сиреневый цвет текста */
+}

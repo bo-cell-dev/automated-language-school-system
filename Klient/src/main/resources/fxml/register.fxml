@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="background" prefHeight="541.0" prefWidth="845.0" stylesheets="@css/entranceCSS.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.RegistrationWindow">
+
+    <children>
+        <!-- Фоновое изображение с размытием -->
+        <ImageView fitHeight="541.0" fitWidth="845.0" preserveRatio="false">
+            <image>
+                <Image url="@images/frog.jpg" />
+            </image>
+            <effect>
+                <GaussianBlur radius="20" />
+            </effect>
+        </ImageView>
+
+
+        <Text fx:id="backText" layoutX="780.0" layoutY="25.0" onMouseClicked="#handleBack" styleClass="back-text-style" text="Назад" />
+        <!-- Центральная белая карточка -->
+        <AnchorPane layoutX="122.5" layoutY="120.0" prefHeight="300.0" prefWidth="600.0" styleClass="card">
+            <HBox layoutX="20" layoutY="20" spacing="40">
+                <!-- Левая колонка: Фамилия, Имя, Отчество -->
+                <VBox spacing="15">
+                    <Text styleClass="subtitle" text="Фамилия" />
+                    <TextField fx:id="lastName" promptText="Введите фамилию" />
+
+                    <Text styleClass="subtitle" text="Имя" />
+                    <TextField fx:id="firstName" promptText="Введите имя" />
+
+                    <Text styleClass="subtitle" text="Отчество" />
+                    <TextField fx:id="middleName" promptText="Введите отчество" />
+                </VBox>
+
+                <!-- Правая колонка: Логин, Пароль, Кнопка -->
+                <VBox alignment="CENTER" prefHeight="246.0" prefWidth="300.0" spacing="15">
+                    <Text styleClass="subtitle" text="Логин" />
+                    <TextField fx:id="login" promptText="Введите логин" />
+
+                    <Text styleClass="subtitle" text="Пароль" />
+                    <PasswordField fx:id="password" promptText="Введите пароль" />
+
+                    <Button fx:id="createAccountBtn" prefHeight="28.0" prefWidth="277.0" styleClass="custom-button" text="Создать аккаунт" onAction="#onRegisterClicked" />
+
+                </VBox>
+            </HBox>
+        </AnchorPane>
+    </children>
+</AnchorPane>

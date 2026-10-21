@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.controller.ScheduleChartController"
+            prefWidth="800" prefHeight="600">
+
+    <children>
+
+        <Text fx:id="backText" layoutX="750.0" layoutY="25.0" text="Назад"
+              onMouseClicked="#handleBack" styleClass="back-text-style"/>
+
+        <BarChart fx:id="barChart" layoutX="20" layoutY="20" prefWidth="760" prefHeight="560">
+            <xAxis>
+                <CategoryAxis label="День"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Количество занятий"/>
+            </yAxis>
+        </BarChart>
+    </children>
+</AnchorPane>

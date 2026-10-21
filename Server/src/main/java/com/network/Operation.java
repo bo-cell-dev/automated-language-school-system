@@ -1,0 +1,22 @@
+package com.network;
+
+public enum Operation {
+    CONNECT,
+    DISCONNECT,
+    MESSAGE,
+    REGISTER,
+    LOGIN,
+
+    ADD_LESSON,
+    DELETE_LESSON,
+    UPDATE_LESSON,
+    GET_LESSONS,
+    GET_DAYS,
+    GET_SCHEDULE,
+    REGISTER_TO_LESSON,
+    CANCEL_REGISTER_TO_LESSON,
+    GET_USER_INFO,
+    GET_USERS_BY_LESSON,
+    GET_CONNECTED_USERS
+
+}

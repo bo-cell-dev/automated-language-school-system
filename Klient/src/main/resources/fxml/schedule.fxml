@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1259.0" styleClass="root" stylesheets="@css/entranceCSS.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ScheduleWindow">
+
+    <children>
+        <!-- Размытое фоновое изображение -->
+        <ImageView fitHeight="600.0" fitWidth="1000.0" preserveRatio="false">
+            <image>
+                <Image url="@images/frog.jpg" />
+            </image>
+            <effect>
+                <GaussianBlur radius="20" />
+            </effect>
+        </ImageView>
+
+        <!-- Верхняя панель с логотипом и названием -->
+        <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="20.0" spacing="10.0">
+            <ImageView fitHeight="50.0" fitWidth="50.0">
+                <image>
+                    <Image url="@images/frog.jpg" />
+                </image>
+            </ImageView>
+            <Text styleClass="bestschool-text" text="BESTschoolEVER" />
+        </HBox>
+
+        <!-- Кнопка Назад -->
+        <Text fx:id="backText" layoutX="1173.0" layoutY="26.0" onMouseClicked="#handleBack" styleClass="back-text-style" text="Назад" />
+
+        <!-- Основной контейнер с прокруткой -->
+        <AnchorPane layoutX="83.0" layoutY="94.0" prefHeight="491.0" prefWidth="1114.0" styleClass="card">
+            <ScrollPane fitToWidth="true" hbarPolicy="AS_NEEDED" layoutX="36.0" layoutY="24.0" prefHeight="422.0" prefWidth="975.0" styleClass="rounded-scroll-pane">
+                    <GridPane fx:id="scheduleGrid" hgap="10" vgap="5">
+                        <padding>
+                            <Insets bottom="10" left="10" right="10" top="10" />
+                        </padding>
+
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+                    </GridPane>
+
+            </ScrollPane>
+        </AnchorPane>
+
+        <!-- Сиреневые кнопки справа рядом с кнопкой Назад -->
+        <HBox alignment="CENTER_RIGHT" layoutX="316.0" layoutY="45.0" spacing="15.0">
+            <Button fx:id="listConnectBtn" onAction="#onListConnectBtn" styleClass="custom-button" text="Список подключенных" />
+            <Button fx:id="listClassesBtn" onAction="#onListClassesBtn" styleClass="custom-button" text="Список занятий" />
+            <Button fx:id="profileBtn" onAction="#onProfileBtn" styleClass="custom-button" text="Профиль" />
+        </HBox>
+    </children>
+</AnchorPane>
